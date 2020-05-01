@@ -13,7 +13,7 @@ const streamFile = (res, asset, headers) => {
   createReadStream(asset).pipe(res);
 };
 
-export const jsonMap = new Map;
+export const _json = new Map;
 
 export const clear = (map, asset) => {
   map.delete(asset);
@@ -72,10 +72,10 @@ export const getPath = source => (
 
 export const getURL = ({url}) => decodeURIComponent(url.replace(/\?.*$/, ''));
 
-const $json = umap(jsonMap);
+const $json = umap(_json);
 export const json = (asset, timeout = 1000) => (
   $json.get(asset) || $json.set(asset, create(
-    timeout && setTimeout(clear, timeout, jsonMap, asset),
+    timeout && setTimeout(clear, timeout, _json, asset),
     (res, rej) => {
       readFile(asset + '.json', (err, data) => {
         err ? rej(err) : res(parse(data));
