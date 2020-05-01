@@ -12,7 +12,9 @@
   },
   "keywords": [
     "ucdn",
-    "utilities"
+    "utilities",
+    "serve",
+    "ucompress"
   ],
   "author": "Andrea Giammarchi",
   "license": "ISC",
@@ -30,5 +32,13 @@
   },
   "dependencies": {
     "umap": "^1.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebReflection/ucdn-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WebReflection/ucdn-utils/issues"
+  },
+  "homepage": "https://github.com/WebReflection/ucdn-utils#readme"
 }
