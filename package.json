@@ -1,0 +1,34 @@
+{
+  "name": "ucdn-utils",
+  "version": "0.0.1",
+  "description": "Basic ucdn utilities in order to just serve files.",
+  "main": "./cjs/index.js",
+  "scripts": {
+    "build": "npm run create-compressed && npm run cjs && npm run test",
+    "create-compressed": "node -e 'require(`fs`).writeFileSync(`./esm/compressed.js`,`export default new Set(${JSON.stringify([...require(`ucompress`).compressed],null,`  `)});\n`)'",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "cjs": "ascjs --no-default esm cjs",
+    "test": "nyc node test/index.js && rm test/tmp*"
+  },
+  "keywords": [
+    "ucdn",
+    "utilities"
+  ],
+  "author": "Andrea Giammarchi",
+  "license": "ISC",
+  "devDependencies": {
+    "ascjs": "^4.0.0",
+    "coveralls": "^3.1.0",
+    "nyc": "^15.0.1",
+    "ucompress": "^0.10.1"
+  },
+  "module": "./esm/index.js",
+  "type": "module",
+  "exports": {
+    "import": "./esm/index.js",
+    "default": "./cjs/index.js"
+  },
+  "dependencies": {
+    "umap": "^1.0.2"
+  }
+}
