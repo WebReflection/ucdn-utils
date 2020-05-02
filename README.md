@@ -6,6 +6,10 @@ Basic [µcdn](https://github.com/WebReflection/ucdn#readme) utilities in order t
 
 The only interesting utility to use is likely the `serve(path[, cacheTimeout])` one, as the rest is mostly needed for internal purposes in _µcdn_ module or in here.
 
+#### Please Note
+
+This module assumes all files already have associated headers. If you don't have those headers files, please use [ucompress.createHeaders(path)](https://github.com/WebReflection/ucompress#about-ucompresscreateheaderspath-headers) before serving via `serve(path[, cacheTimeout])`.
+
 
 ### Example
 
