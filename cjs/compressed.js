@@ -10,6 +10,7 @@ module.exports = new Set([
   ".htm",
   ".html",
   ".js",
+  ".mjs",
   ".svg",
   ".xml"
 ]);
