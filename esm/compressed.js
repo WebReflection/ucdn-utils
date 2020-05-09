@@ -1,6 +1,5 @@
 export default new Set([
   ".csv",
-  ".json",
   ".md",
   ".txt",
   ".woff2",
@@ -10,6 +9,7 @@ export default new Set([
   ".html",
   ".js",
   ".mjs",
+  ".json",
   ".svg",
   ".xml"
 ]);

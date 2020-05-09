@@ -1,7 +1,6 @@
 'use strict';
 module.exports = new Set([
   ".csv",
-  ".json",
   ".md",
   ".txt",
   ".woff2",
@@ -11,6 +10,7 @@ module.exports = new Set([
   ".html",
   ".js",
   ".mjs",
+  ".json",
   ".svg",
   ".xml"
 ]);
