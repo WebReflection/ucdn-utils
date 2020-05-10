@@ -10,6 +10,7 @@ module.exports = new Set([
   ".html",
   ".js",
   ".mjs",
+  ".map",
   ".json",
   ".svg",
   ".xml"
