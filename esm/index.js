@@ -70,7 +70,9 @@ export const getPath = source => (
   source[0] === '/' ? source : resolve(source)
 );
 
-export const getURL = ({url}) => decodeURIComponent(url.replace(/\?.*$/, ''));
+export const getURL = ({url}) => decodeURIComponent(
+  url.replace(/\?.*$/, '').replace(/\/$/, '/index.html')
+);
 
 const $json = umap(_json);
 export const json = (asset, timeout = 1000) => (

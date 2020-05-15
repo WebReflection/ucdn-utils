@@ -79,7 +79,9 @@ const getPath = source => (
 );
 exports.getPath = getPath;
 
-const getURL = ({url}) => decodeURIComponent(url.replace(/\?.*$/, ''));
+const getURL = ({url}) => decodeURIComponent(
+  url.replace(/\?.*$/, '').replace(/\/$/, '/index.html')
+);
 exports.getURL = getURL;
 
 const $json = umap(_json);
