@@ -1,6 +1,6 @@
 {
   "name": "ucdn-utils",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Basic ucdn utilities in order to just serve files.",
   "main": "./cjs/index.js",
   "scripts": {
