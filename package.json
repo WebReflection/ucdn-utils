@@ -22,7 +22,7 @@
     "ascjs": "^4.0.1",
     "coveralls": "^3.1.0",
     "nyc": "^15.1.0",
-    "ucompress": "^0.20.2"
+    "ucompress": "^0.21.0"
   },
   "module": "./esm/index.js",
   "type": "module",
